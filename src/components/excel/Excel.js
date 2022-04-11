@@ -12,10 +12,6 @@ export class Excel {
           this.components = this.components.map(Comment => {
             const $el = $.create('div', Comment.className)
             const component = new Comment($el)
-              // // DEBUG
-              // if (component.name) {
-              //     window['c' + component.name] = component
-              // }
             $el.html(component.toHTML())
             $root.append($el)
             return component
